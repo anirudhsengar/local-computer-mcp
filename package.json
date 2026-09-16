@@ -1,0 +1,28 @@
+{
+  "name": "local-computer-mcp",
+  "version": "2.2.0",
+  "description": "Always-on unrestricted local computer MCP server for ChatGPT",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "repository": "https://github.com/anirudhsengar/local-computer-mcp",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "bash scripts/run-server.sh",
+    "test": "node --test test/*.test.mjs",
+    "inspect:mcp": "npx @modelcontextprotocol/inspector --cli bash scripts/run-server.sh",
+    "ops": "bash scripts/ops.sh"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "@playwright/mcp": "0.0.80",
+    "hyperframes": "0.8.30",
+    "node-pty": "1.1.0",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/inspector": "2.5.0"
+  }
+}
